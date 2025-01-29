@@ -81,7 +81,10 @@ function handleCityInput() {
     console.log(city);
 
     checkWeather(city)
-        .then(data => updateWeatherData(data))
+        .then(data => {
+            updateWeatherData(data);
+            saveCity(city);
+        })
         .catch(error => console.log(`Error fetching data: `, error))
 }
 
@@ -94,6 +97,15 @@ function showTask(){
 }
 
 document.getElementById("search-button").addEventListener('click', handleCityInput);
+
+window.onload = function() {
+    const savedCity = localStorage.getItem("city");
+    if (savedCity) {
+        checkWeather(savedCity)
+            .then(data => updateWeatherData(data))
+            .catch(error => console.log(`Error fetching data for saved city: `, error))
+    }
+}
 
 // checkWeather();
 
