@@ -52,9 +52,9 @@ body{
     gap: 20px;
 }
 
-#sun-icon{
+#weather-icon{
     width: 100%;
-    max-width: 70px;
+    max-width: 110px;
 }
 
 #temperature-info{
