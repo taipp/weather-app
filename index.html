@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter city name"
+            spellcheck="false" id="input-box">
+            <button id="search-button"><img src="img/search.png" id="search-icon"></button>
+        </div>
+        <div class="main">
+            <div class="weather-icon">
+                <img src="img/sun-icon.png" id="sun-icon">
+            </div>
+            <div class="info">
+                <h1 id="temperature-info">7°c</h1>
+                <h2 id="city-name">New York</h2>
+            </div>
+        </div>
+        <div class="details">
+            <div class="humidity-block">
+                <div class="humidity-block-stats">
+                    <img src="img/humidity-icon.png" id="humidity-icon">
+                    <p>48%</p>
+                </div>
+                <div class="humidity-block-title">
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="wind-block">
+                <div class="wind-block-stats">
+                    <div>
+                        <img src="img/wind-icon2.png" id="wind-icon">
+                    </div>
+                    <div>
+                        <p>10.29 km/h</p>
+                    </div>
+                </div>
+                <div class="wind-block-title">
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
